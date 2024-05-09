@@ -1,0 +1,156 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --BCK-COLOR: #211e20;
+    --MED1-COLOR: #555568;
+    --MED2-COLOR: #a0a08b;
+    --HIGH-COLOR: #e9efec;
+
+    --SERIAL-WHITE: #cbcbcb;
+    --SERIAL-BLACK: #2d2d2d;
+    --SERIAL-GRAY: #6c6c6c;
+
+}
+
+@font-face {
+    font-family: 'VT323';
+    src: url('vt323/VT323-Regular.eot');
+    src: url('vt323/VT323-Regular.eot?#iefix') format('embedded-opentype'),
+        url('vt323/VT323-Regular.woff2') format('woff2'),
+        url('vt323/VT323-Regular.woff') format('woff'),
+        url('vt323/VT323-Regular.ttf') format('truetype'),
+        url('vt323/VT323-Regular.svg#VT323-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    font-family: VT323;
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+    background-color: var(--SERIAL-WHITE);
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: vrgba(0,0,0,0.5);
+    padding: 10px 10px;
+}
+
+.navbar > a {
+    color: var(--SERIAL-WHITE);
+    background-color: var(--SERIAL-BLACK);
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-right: 20px;
+    border: 2px solid var(--SERIAL-GRAY);
+}
+
+.navbar > a:hover {
+    background-color: var(--SERIAL-GRAY);
+}
+
+/* Titles */
+#projects-title > h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20em;
+    color: var(--SERIAL-BLACK);
+}
+
+.separator {
+    border: 8px solid var(--SERIAL-BLACK);
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+.left {
+    flex: 1;
+    padding-right: 20px;
+}
+.right {
+    flex: 2;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
