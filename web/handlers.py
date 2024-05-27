@@ -18,6 +18,7 @@ def extract_project_data(project_dir: str, language: str = "en") -> dict:
     """
     # Content files
     attributes_file = f"{project_dir}/attributes_{language}.toml"
+    icon_file = f"{project_dir}/icon.png"
     description_file = f"{project_dir}/description_{language}.md"
 
     # Content
@@ -27,10 +28,13 @@ def extract_project_data(project_dir: str, language: str = "en") -> dict:
     
     # Build data
     description_data = {
-        "long_description": markdown.markdown(description_content)
+        "long_description": ""#markdown.markdown(description_content) FURTHER IMPLEMENTATION
+    }
+    icon_data = {
+        "icon_addr": icon_file
     }
 
-    project_data = {**attributes_content, **description_data}
+    project_data = {**attributes_content, **description_data, **icon_data}
     return project_data
 
 

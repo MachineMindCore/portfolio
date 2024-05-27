@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='experience.css') }}">
+</head>
+<body>
+
+    <!-- navbar -->
+    <div class="container">
+        <div class="nav_container">
+            <div class="navbar">
+                <a href="/profile">Profile</a>
+                <a href="/experience">Experience</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+        </div>
+
+
+    <div class="projects-container">
+        {% for project in projects_data %}
+        <div class="prj_title">
+            <h1> {{ project.name }} </h1>
+        </div>
+        <div class="prj_icon">
+            <img src="{{ project.icon_addr }}">
+        </div>
+        <div class="prj_description">
+            <p>{{ project.short_description }}</p>
+        </div>
+        {% endfor %}
+        <!-- Add more cards as needed -->
+    </div>
+</body>
+</html>

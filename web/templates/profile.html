@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MachineMindCore</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<body>
+
+    <!-- navbar -->
+    <div class="container">
+    <div class="nav_container">
+        <div class="navbar">
+            <a href="/profile">Profile</a>
+            <a href="/experience">Experience</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="prf_container">
+        
+        <div id="github-link" class="box portrait">
+            <div class="prf_img">
+                <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Image">
+            </div>
+            <div class="name">
+                Sergio Vargas
+            </div>
+            <div class="nick">
+                <h2>MachineMindCore</h2>
+            </div>
+            <div class="mini_separator"></div>
+            <div>
+                <p class="">Software Developer</p>
+                <p class="">Data Specialist</p>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("github-link").onclick = function() {
+                window.location.href = "https://github.com/MachineMindCore";
+            };
+        </script>
+    
+
+        <div class="box biography">
+            <p class="bold">
+            Hello ヾ( ˃ᴗ˂ )◞
+            </p>
+            <p>
+                I'm a software developer with a focus on data science and data engineering. With a strong foundation in automation, mathematics, statistics, computation, and electronics, I bring a unique blend of skills to the table. As a self-taught enthusiast who will be soon graduated in electrical engineering, I am passionate about leveraging data to drive insightful solutions. My journey has equipped me with the ability to tackle complex problems and make useful tools for the trip.
+            </p>
+            <p>
+                I love pixel and ascii art ദ്ദി( • ᴗ - ) ✧
+            </p>
+        </div>
+        <div class="box technologies">
+            <div>
+                <h2 class="bold">Languages</h2>
+                <div class="icons">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-plain.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
+          
+                </div>
+            </div>
+            <div>
+                <h2 class="bold">Libraries</h2>
+                <div class="icons">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg" />
+                </div>
+            </div>
+            <div>
+                <h2 class="bold">Tools</h2>
+                <div class="icons">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pypi/pypi-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/debian/debian-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" />
+          
+                </div>
+            </div>
+            <div>
+                <h2 class="bold">Learning</h2>
+                <div class="icons">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/poetry/poetry-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" />
+                </div>
+            </div>
+        </div>
+
+    
+</body>
+</html>
