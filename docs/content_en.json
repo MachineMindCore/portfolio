@@ -1,0 +1,7 @@
+{
+    "name": "simple_markowitz",
+    "date": ["Apr/2024", "May/2024"],
+    "types": ["Web", "Cloud"],
+    "techs": ["Python", "Flask", "HTML", "CSS", "AWS", "Terraform", "GitHubAPI"],
+    "description": "This is my personal portfolio, designed to connect with the GitHub API to dynamically display live information about my most important projects. The portfolio is deployed on AWS using Terraform for infrastructure management."
+}

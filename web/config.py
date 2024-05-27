@@ -11,8 +11,7 @@ REPO_FILE = "repo.toml"
 # GitHub Vars
 GH_TOKEN = get_github_token()
 gh_client = Github(GH_TOKEN)
-OWNER = gh_client.get_user()
-CONTENT_PATH = 'doc/'
+CONTENT_PATH = 'docs/'
 BRANCH = 'main'
 
 # Flask vars

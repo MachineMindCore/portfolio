@@ -1,12 +1,11 @@
 JOBS = [
-    ["rpa_pidgin", "main"]
+    ["rpa_pidgin", "master"]
 ]
 
 PROJECTS = [
     ["portfolio", "master"],
     ["mathnets", "main"],
     ["tabacco_net", "main"],
-    ["powercas", "main"],
     ["politics_tweets", "master"],
     ["simple_markowitz", "main"],
     ["DataFluids", "master"]

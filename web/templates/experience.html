@@ -18,8 +18,22 @@
         </div>
         </div>
 
+    <div class="head-space">
+        <h1 class="head">Jobs</h1>
+        <div class="head_line_1"></div>
+        <div class="head_line_2"></div>
+        <div class="head_line_3"></div>
+    </div>
 
-    <div class="projects-container">
+    <div class="head-space">
+        <h1 class="head">Projects</h1>
+        <div class="head_line_1"></div>
+        <div class="head_line_2"></div>
+        <div class="head_line_3"></div>
+    </div>
+
+    <div class="project-space">
+    <div class="projects-container animated-div">
         {% for project in projects_data %}
         <div class="prj_title">
             <h1> {{ project.name }} </h1>
@@ -32,6 +46,7 @@
         </div>
         {% endfor %}
         <!-- Add more cards as needed -->
+    </div>
     </div>
 </body>
 </html>
