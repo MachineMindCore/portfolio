@@ -1,15 +1,14 @@
 import os
-from github import Auth, Github
+from github import Github
+from dotenv import load_dotenv
 
-def get_token(token_addr):
-    with open(token_addr) as tokenFile:
-        return tokenFile.read()
+load_dotenv()
 
 # Local vars
 REPO_FILE = "repo.toml"
 
 # GitHub Vars
-GH_TOKEN = get_token(".keys/github.key")
+GH_TOKEN = os.getenv("GH_TOKEN")
 gh_client = Github(GH_TOKEN)
 OWNER = "MachineMindCore"
 JOBS = ["RPA-Developer_Pidgin_"]
