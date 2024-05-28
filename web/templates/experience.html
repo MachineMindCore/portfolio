@@ -13,7 +13,6 @@
             <div class="navbar">
                 <a href="/profile">Profile</a>
                 <a href="/experience">Experience</a>
-                <a href="/contact">Contact</a>
             </div>
         </div>
         </div>
@@ -25,6 +24,23 @@
         <div class="head_line_3"></div>
     </div>
 
+    <div class="project-space">
+        {% for job in jobs_data %}
+        <div class="projects-container expand-animation">
+        <div class="prj_title">
+            <h1> {{ job.name }} </h1>
+        </div>
+        <div class="prj_icon">
+            <img src="">
+        </div>
+        <div class="prj_description">
+            <p>{{ job.description }}</p>
+        </div>
+        </div>
+        {% endfor %}
+        <!-- Add more cards as needed -->
+    </div>
+
     <div class="head-space">
         <h1 class="head">Projects</h1>
         <div class="head_line_1"></div>
@@ -33,20 +49,20 @@
     </div>
 
     <div class="project-space">
-    <div class="projects-container animated-div">
         {% for project in projects_data %}
+        <div class="projects-container expand-animation">
         <div class="prj_title">
             <h1> {{ project.name }} </h1>
         </div>
         <div class="prj_icon">
-            <img src="{{ project.icon_addr }}">
+            <img src="{{ project|get_icon }}">
         </div>
         <div class="prj_description">
-            <p>{{ project.short_description }}</p>
+            <p>{{ project.description }}</p>
+        </div>
         </div>
         {% endfor %}
         <!-- Add more cards as needed -->
-    </div>
     </div>
 </body>
 </html>

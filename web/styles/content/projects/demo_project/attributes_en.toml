@@ -1,8 +1,0 @@
-name = "project_demo"
-type = "web"
-link = "https://localhost"
-
-short_description = "Demo project example short description."
-languages = ["Python", "Bash"]
-technologies = ["Flask", "AWS"]
-topics = ["web development", "portfolio", "architecture"]

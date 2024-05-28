@@ -1,32 +1,33 @@
 from typing import Generator
-import toml
-from config import CONTENT_PATH, gh_client, REPO_FILE
+from web.config import gh_client, OWNER, JOBS
+import logging
+from github.Repository import Repository
+from flask import url_for
 
-# Load list of repositories
-repo_collection = toml.load(REPO_FILE)["PROJECTS"]
+# Configure logging
+logging.basicConfig(filename='error.log', level=logging.ERROR, 
+                    format='%(asctime)s %(levelname)s:%(message)s')
+
 
 # Get user
 gh_user = gh_client.get_user()
 
-def get_jobs_data(language = "en") -> Generator[None, None, dict]:
+def get_jobs_data(language: str = "en") -> Generator[None, None, dict]:
     """
     Generator to get Github jobs data. Returns a dict with all data needed
     """
-    repo_collection
+    for job_name in JOBS:
+        job = gh_user.get_repo(job_name)
+        yield job
 
-def get_projects_data(language = "en") -> Generator[None, None, dict]:
-    """
-    Generator to get GitHub projects data. Returns a dict with all data needed
-    """
-    # Get data by repo
-    gh_user = gh_client.get_user()
-    for repo_name, branch in repo_collection:
-        repo = gh_user.get_repo(repo_name)
-        data_path = f"{CONTENT_PATH}/content_{language}.md"
-        repo.get_contents(data_path, ref=branch)
+def get_projects_data(language = "en"):
+    starred_repos = gh_user.get_starred()
+    owner_repos = filter(lambda repo: True if repo.full_name.split("/")[0] == OWNER else False, starred_repos)
+
+    for repo in owner_repos:
         yield repo
 
-
-if __name__ == "__main__":
-    for repo in get_experience_data("PROJECTS"):
-        print(repo.name)
+def get_image_addr(repo: Repository):
+    topics = repo.topics
+    first_topic = topics[0] if len(topics)!=0 else "null"
+    return url_for("static", filename=f"topics/{first_topic}.png")

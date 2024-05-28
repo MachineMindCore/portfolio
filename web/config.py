@@ -1,23 +1,22 @@
 import os
 from github import Auth, Github
 
-def get_github_token():
-    with open("token") as tokenFile:
+def get_token(token_addr):
+    with open(token_addr) as tokenFile:
         return tokenFile.read()
 
 # Local vars
 REPO_FILE = "repo.toml"
 
 # GitHub Vars
-GH_TOKEN = get_github_token()
+GH_TOKEN = get_token(".keys/github.key")
 gh_client = Github(GH_TOKEN)
-CONTENT_PATH = 'docs/'
-BRANCH = 'main'
+OWNER = "MachineMindCore"
+JOBS = ["RPA-Developer_Pidgin_"]
 
 # Flask vars
-TEMPLATE_DIR = os.path.abspath("templates/")
-STATIC_DIR = os.path.abspath("styles/")
-CONTENT_DIR = os.path.abspath("styles/content/")
+TEMPLATE_DIR = os.path.abspath("web/templates/")
+STATIC_DIR = os.path.abspath("web/styles/")
 
 TEMPLATES = {
     "profile": {
