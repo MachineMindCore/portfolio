@@ -34,4 +34,5 @@ def contact():
 portfolio.jinja_env.filters['get_icon'] = get_image_addr
 
 if __name__ == '__main__':
-    portfolio.run(debug=True)
+    from waitress import serve
+    serve(portfolio, host="0.0.0.0", port=8080)

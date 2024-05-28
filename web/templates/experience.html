@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='experience.css') }}">
 </head>
@@ -51,15 +52,17 @@
     <div class="project-space">
         {% for project in projects_data %}
         <div class="projects-container expand-animation">
-        <div class="prj_title">
-            <h1> {{ project.name }} </h1>
-        </div>
-        <div class="prj_icon">
-            <img src="{{ project|get_icon }}">
-        </div>
-        <div class="prj_description">
-            <p>{{ project.description }}</p>
-        </div>
+            <div class="prj_header">
+                <div class="prj_title">
+                    <h1> {{ project.name }} </h1>
+                </div>
+                <div class="prj_icon">
+                    <img src="{{ project|get_icon }}">
+                </div>
+            </div>
+            <div class="prj_description">
+                <p>{{ project.description }}</p>
+            </div>
         </div>
         {% endfor %}
         <!-- Add more cards as needed -->

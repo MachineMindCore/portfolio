@@ -68,7 +68,6 @@ body {
     justify-content: center;
 }
 
-
 .box {
     flex: 1;
     min-width: 250px;
@@ -150,11 +149,12 @@ body {
 .icons {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 15px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     .prf_container {
         display: grid;
         grid-template-columns: 1fr;

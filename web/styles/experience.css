@@ -103,7 +103,13 @@ body {
 
 .prj_title h1 {
     font-size: 24px;
+    flex: 1;
     color: var(--SERIAL-BLACK);
+}
+
+.prj_header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .prj_icon img {
