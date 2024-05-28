@@ -1,10 +1,6 @@
 from web.experience import get_jobs_data, get_projects_data, get_image_addr
 from web.config import TEMPLATES, TEMPLATE_DIR, STATIC_DIR
-from flask import (
-    Flask, request,
-    render_template, redirect, url_for
-)
-from jinja2 import Environment
+from flask import Flask, render_template, redirect
 
 # App
 portfolio = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR, static_url_path=STATIC_DIR)
