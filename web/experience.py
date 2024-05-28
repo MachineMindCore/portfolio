@@ -5,7 +5,7 @@ from github.Repository import Repository
 from flask import url_for
 
 # Configure logging
-logging.basicConfig(filename='error.log', level=logging.ERROR, 
+logging.basicConfig(filename='logs/error.log', level=logging.ERROR, 
                     format='%(asctime)s %(levelname)s:%(message)s')
 
 
