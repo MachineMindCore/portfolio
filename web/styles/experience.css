@@ -60,14 +60,22 @@ body {
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 10rem;
-    gap: 20px;
+    gap: 40px;
+    margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 .projects-container {
     background-color: var(--SERIAL-WHITE);
     border: 5px dashed var(--SERIAL-GRAY);
     border-radius: 10px;
+    padding: 5px;
 }
+
+.projects-container:hover {
+    border: 10px solid var(--SERIAL-GRAY);
+}
+
 .head-space {
     display: flex;
     flex-direction: column;

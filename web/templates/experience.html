@@ -28,15 +28,17 @@
     <div class="project-space">
         {% for job in jobs_data %}
         <div class="projects-container expand-animation">
-        <div class="prj_title">
-            <h1> {{ job.name }} </h1>
-        </div>
-        <div class="prj_icon">
-            <img src="">
-        </div>
-        <div class="prj_description">
-            <p>{{ job.description }}</p>
-        </div>
+            <div class="prj_header">
+                <div class="prj_title">
+                    <h1> {{ job|decode_job }} </h1>
+                </div>
+                <div class="prj_icon">
+                    <img src="{{ job|get_icon }}">
+                </div>
+            </div>
+            <div class="prj_description">
+                <p>{{ job.description }}</p>
+            </div>
         </div>
         {% endfor %}
         <!-- Add more cards as needed -->
@@ -51,7 +53,7 @@
 
     <div class="project-space">
         {% for project in projects_data %}
-        <div class="projects-container expand-animation">
+        <div id="{{ project.name }}" class="projects-container expand-animation">
             <div class="prj_header">
                 <div class="prj_title">
                     <h1> {{ project.name }} </h1>
@@ -64,6 +66,12 @@
                 <p>{{ project.description }}</p>
             </div>
         </div>
+
+        <script>
+            document.getElementById("{{ project.name }}").onclick = function() {
+                window.location.href = "https://github.com/MachineMindCore/{{project.name}}";
+            };
+        </script>
         {% endfor %}
         <!-- Add more cards as needed -->
     </div>

@@ -30,3 +30,7 @@ def get_image_addr(repo: Repository):
     topics = repo.topics
     first_topic = topics[0] if len(topics)!=0 else "null"
     return url_for("static", filename=f"topics/{first_topic}.png")
+
+def decode_job_name(repo: Repository):
+    encoded_name = repo.name
+    return encoded_name.replace("-", " ").replace("_", "(", 1).replace("_", ")", 1)

@@ -1,5 +1,5 @@
-from web.experience import get_jobs_data, get_projects_data, get_image_addr
-from web.config import TEMPLATES, TEMPLATE_DIR, STATIC_DIR
+from .experience import get_jobs_data, get_projects_data, get_image_addr, decode_job_name
+from .config import TEMPLATES, TEMPLATE_DIR, STATIC_DIR
 from flask import Flask, render_template, redirect
 
 # App
@@ -28,6 +28,7 @@ def contact():
     return render_template(TEMPLATES["contact"]["base"])
 
 portfolio.jinja_env.filters['get_icon'] = get_image_addr
+portfolio.jinja_env.filters['decode_job'] = decode_job_name
 
 if __name__ == '__main__':
     from waitress import serve

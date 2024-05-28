@@ -3,3 +3,6 @@
 token
 .env
 error.log
+aws-example/
+aws/
+.vercel
