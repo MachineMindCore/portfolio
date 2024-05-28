@@ -1,12 +1,11 @@
 from typing import Generator
 from web.config import gh_client, OWNER, JOBS
-import logging
 from github.Repository import Repository
 from flask import url_for
 
 # Configure logging
-logging.basicConfig(filename='logs/error.log', level=logging.ERROR, 
-                    format='%(asctime)s %(levelname)s:%(message)s')
+#logging.basicConfig(filename='logs/error.log', level=logging.ERROR, 
+#                    format='%(asctime)s %(levelname)s:%(message)s')
 
 
 # Get user
