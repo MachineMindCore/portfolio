@@ -150,3 +150,8 @@ table {
     padding-top: 10px;
     padding-left: 10px;
 }
+
+.bottom-align {
+    position: absolute;
+    bottom: 0;
+}

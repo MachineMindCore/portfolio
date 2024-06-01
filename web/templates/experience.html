@@ -25,19 +25,21 @@
         <div class="head_line_3"></div>
     </div>
 
-    <div class="project-space">
+    <div class="job-space">
         {% for job in jobs_data %}
         <div class="projects-container expand-animation">
             <div class="prj_header">
                 <div class="prj_title">
                     <h1> {{ job|decode_job }} </h1>
+                    <p class="soft-text">Ago/2023 - Nov/2023</p>
                 </div>
                 <div class="prj_icon">
                     <img src="{{ job|get_icon }}">
                 </div>
             </div>
-            <div class="prj_description">
-                <p>{{ job.description }}</p>
+            <div class="prj_content">
+                <p class="description">{{ job.description }}</p>
+                <p class="techs">Techs: Python, Javascript, Selenium, Pandas, request</p>
             </div>
         </div>
         {% endfor %}
@@ -57,13 +59,15 @@
             <div class="prj_header">
                 <div class="prj_title">
                     <h1> {{ project.name }} </h1>
+                    <p class="soft-text">{{project|get_date}}</p>
                 </div>
                 <div class="prj_icon">
                     <img src="{{ project|get_icon }}">
                 </div>
             </div>
-            <div class="prj_description">
-                <p>{{ project.description }}</p>
+            <div class="prj_content">
+                <p class="description">{{ project.description }}</p>
+                <p class="techs">Languages: {{ project|get_languages }}</p>
             </div>
         </div>
 

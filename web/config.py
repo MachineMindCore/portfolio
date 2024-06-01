@@ -18,19 +18,10 @@ TEMPLATE_DIR = os.path.abspath("web/templates/")
 STATIC_DIR = os.path.abspath("web/styles/")
 
 TEMPLATES = {
-    "profile": {
-        "base": "profile.html"
-    },
-
-    "experience": {
-        "base": "experience.html",
-        "job": "job_content.html",
-        "project": "project_content.html"
-    },
-
-    "contact": {
-        "base": "contact.html"
-    }
+    "profile": "profile.html",
+    "experience": "experience.html",
+    "contact": "contact.html",
+    "animation": "animation.html"
 }
 
 

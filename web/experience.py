@@ -1,8 +1,5 @@
 from typing import Generator
 from web.config import gh_client, OWNER, JOBS
-from github.Repository import Repository
-from flask import url_for
-
 # Configure logging
 #logging.basicConfig(filename='logs/error.log', level=logging.ERROR, 
 #                    format='%(asctime)s %(levelname)s:%(message)s')
@@ -25,12 +22,3 @@ def get_projects_data(language = "en"):
 
     for repo in owner_repos:
         yield repo
-
-def get_image_addr(repo: Repository):
-    topics = repo.topics
-    first_topic = topics[0] if len(topics)!=0 else "null"
-    return url_for("static", filename=f"topics/{first_topic}.png")
-
-def decode_job_name(repo: Repository):
-    encoded_name = repo.name
-    return encoded_name.replace("-", " ").replace("_", "(", 1).replace("_", ")", 1)
