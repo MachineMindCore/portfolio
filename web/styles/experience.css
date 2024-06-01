@@ -54,6 +54,13 @@ body {
     background-color: var(--SERIAL-WHITE); /* Adjust the color of the line */
 }
 
+@media (max-width: 900px) {
+    .navbar > a {
+        font-size: 2em;
+    }
+}
+
+
 .job-space {
     display: grid;
     max-width: 900px;
