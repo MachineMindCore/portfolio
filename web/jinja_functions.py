@@ -4,19 +4,33 @@ from datetime import datetime
 
 from requests import get
 
-def get_image_addr(repo: Repository):
-    topics = repo.topics
-    first_topic = topics[0] if len(topics)!=0 else "null"
-    return url_for("static", filename=f"topics/{first_topic}.png")
+LOGO_TOPICS = {"package", "web", "dash", "pidgin"}
 
-def decode_job_name(repo: Repository):
-    encoded_name = repo.name
-    return encoded_name.replace("-", " ").replace("_", "(", 1).replace("_", ")", 1)
+def get_logo_addr(obj: dict[str, str]) -> str:
+    """
+    From the main topic of the object return the matching topic image.
+    """
+    topics = set(obj["topics"])
+    common_topics = topics.intersection(LOGO_TOPICS)
+    main_topic = common_topics.pop() if len(common_topics) > 0 else "python" 
+    return url_for("static", filename=f"topics/{main_topic}.png")
 
-def get_languages(repo: Repository):
-    languages = repo.get_languages().keys()
-    return ', '.join(lang for lang in languages)
+def get_languages(obj: dict[str, str]) -> str:
+    """
+    Format language list into a string.
+    """
+    languages_str = ""
+    
+    for lang in obj["languages"]:
+        languages_str += f", {lang}"
+    return languages_str[2:]
 
-def get_date(repo: Repository):
-    date_raw = repo.created_at
-    return date_raw.strftime("%b/%Y")
+def get_technologies(obj: dict[str, str]) -> str:
+    """
+    Format language list into a string.
+    """
+    technologies_str = ""
+    
+    for lang in obj["technologies"]:
+        technologies_str += f", {lang}"
+    return technologies_str[2:]

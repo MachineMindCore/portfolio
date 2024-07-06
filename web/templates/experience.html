@@ -30,8 +30,8 @@
         <div class="projects-container expand-animation">
             <div class="prj_header">
                 <div class="prj_title">
-                    <h1> {{ job|decode_job }} </h1>
-                    <p class="soft-text">Ago/2023 - Nov/2023</p>
+                    <h1>{{ job.job }}</h1>
+                    <p class="soft-text">{{ job.start_date }} - {{ job.end_date }}</p>
                 </div>
                 <div class="prj_icon">
                     <img src="{{ job|get_icon }}">
@@ -39,7 +39,7 @@
             </div>
             <div class="prj_content">
                 <p class="description">{{ job.description }}</p>
-                <p class="techs">Techs: Python, Javascript, Selenium, Pandas, request</p>
+                <p class="techs">Techs: {{ job|get_techs }}</p>
             </div>
         </div>
         {% endfor %}
@@ -59,7 +59,7 @@
             <div class="prj_header">
                 <div class="prj_title">
                     <h1> {{ project.name }} </h1>
-                    <p class="soft-text">{{project|get_date}}</p>
+                    <p class="soft-text">{{ project.created_at }}</p>
                 </div>
                 <div class="prj_icon">
                     <img src="{{ project|get_icon }}">
