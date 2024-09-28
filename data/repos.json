@@ -1,0 +1,105 @@
+[
+    {
+        "name": "portfolio",
+        "topics": [
+            "web"
+        ],
+        "description": "This website showcases my personal projects, dynamically linked to GitHub via the API to display live information from my repositories. It provides an up-to-date view of my work and contributions.",
+        "created_at": "May/2024",
+        "languages": [
+            "HTML",
+            "CSS",
+            "Python",
+            "Shell"
+        ]
+    },
+    {
+        "name": "mathnets",
+        "topics": [
+            "package"
+        ],
+        "description": "Final project for my postgraduate network science class, focused on modeling a mathematical network. The goal was to create educational roadmaps from fundamental nodes to other knowledge nodes using advanced graph theory and linear algebra techniques.",
+        "created_at": "Apr/2024",
+        "languages": [
+            "Python",
+            "Shell",
+            "Batchfile"
+        ]
+    },
+    {
+        "name": "tabacco_net",
+        "topics": [
+            "package"
+        ],
+        "description": "A network science mini-project investigating how medical entities share information and their macro interactions, providing insights into the dynamics and structure of these exchanges.",
+        "created_at": "Mar/2024",
+        "languages": [
+            "Python",
+            "Batchfile",
+            "Shell"
+        ]
+    },
+    {
+        "name": "simple_markowitz",
+        "topics": [
+            "package"
+        ],
+        "description": "This financial Python package computes optimal portfolios based on Yahoo Finance data, grounded in Markowitz's Modern Portfolio Theory. It generates bullet plots for a set of assets and identifies the efficient frontier, highlighting the optimal portfolio family on the top edge line.",
+        "created_at": "Mar/2024",
+        "languages": [
+            "Python"
+        ]
+    },
+    {
+        "name": "DataFluids",
+        "topics": [
+            "dash"
+        ],
+        "description": "This interactive dashboard is designed to explore and model data from the Colombian energy market. It employs Random Forest models to predict power demand by department and visualize the predictions. Additionally, it is used to forecast power profiles for solar energy projects.",
+        "created_at": "Mar/2024",
+        "languages": [
+            "Python",
+            "CSS"
+        ]
+    },
+    {
+        "name": "powercas",
+        "topics": [
+            "package"
+        ],
+        "description": "Power system analysis package for the CAS series calculators. Python native enviroment (not Numpy implementation).",
+        "created_at": "Nov/2023",
+        "languages": [
+            "Python"
+        ]
+    },
+    {
+        "name": "politics_tweets",
+        "topics": [
+            "package"
+        ],
+        "description": "A Python library developed for a linguistics thesis. It provides pipelines to extract, transform, and analyze Twitter data. The main objective was to measure sentiment features of election candidates using BERT models, focusing on the 2022 Colombian presidential elections.",
+        "created_at": "Sep/2022",
+        "languages": [
+            "Jupyter Notebook",
+            "Python",
+            "Makefile",
+            "Batchfile"
+        ]
+    },
+    {
+        "name": "cuts_appointment",
+        "topics": [
+            "web"
+        ],
+        "description": "This website was my final project for the MINTIC 2022 courses. It facilitates scheduling and managing appointments, providing an efficient and user-friendly interface for both clients and service providers.",
+        "created_at": "Aug/2022",
+        "languages": [
+            "Python",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Shell"
+        ]
+    }
+]

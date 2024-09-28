@@ -1,0 +1,18 @@
+[
+    {
+        "job": "RPA developer",
+        "topics": [
+            "pidgin"
+        ],
+        "start_date": "Aug/2023",
+        "end_date": "Nov/2023",
+        "description": "Developer responsible for automating data transfer, querying, and creation processes through pipelines on the client's server (Teleperformance). Additionally, I created a library to optimize developer productivity by simulating the server on the local machine.",
+        "technologies": [
+            "Python",
+            "Javascript",
+            "Selenium",
+            "Pandas",
+            "APIs"
+        ]
+    }
+]

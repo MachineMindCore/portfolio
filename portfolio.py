@@ -1,12 +1,11 @@
-from .experience import get_exp_data
-from .jinja_functions import get_logo_addr, get_languages, get_technologies
-from .config import TEMPLATES, TEMPLATE_DIR, STATIC_DIR
-from flask import Flask, render_template, redirect, stream_with_context, Response
-from icecream import ic
+from portfolio.experience import get_exp_data
+from portfolio.jinja_functions import get_logo_addr, get_languages, get_technologies
+from portfolio.config import TEMPLATES
+from flask import Flask, render_template, redirect, stream_with_context, Response, url_for
 
 # App
-portfolio = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR, static_url_path=STATIC_DIR)
-
+portfolio = Flask(__name__)
+ 
 # Endpoints
 @portfolio.route('/')
 def index():
@@ -20,8 +19,6 @@ def home():
 def experience():
     jobs_data = get_exp_data("jobs.json")
     projects_data = get_exp_data("repos.json")
-    ic(jobs_data)
-    ic(projects_data)
     return render_template(TEMPLATES["experience"], projects_data=projects_data, jobs_data=jobs_data)
     
 @portfolio.route('/contact')

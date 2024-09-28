@@ -75,7 +75,7 @@ def save_data(folder_address: str | Path, *file_descriptors: tuple) -> None:
 
 if __name__ == "__main__":
     USERNAME = "MachineMindCore"
-    DATA_ADDR = Path.home() / "Data/portfolio"
+    DATA_ADDR = "data"
 
     repos = fetch_starred_repos(USERNAME)
     jobs = fetch_jobs(USERNAME)

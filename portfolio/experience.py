@@ -1,7 +1,7 @@
 import json
 
 from typing import Generator
-from web.config import gh_client, OWNER, JOBS
+from portfolio.config import gh_client, OWNER, JOBS
 from pathlib import Path
 # Configure logging
 #logging.basicConfig(filename='logs/error.log', level=logging.ERROR, 
@@ -11,7 +11,7 @@ from pathlib import Path
 # Get user
 gh_user = gh_client.get_user()
 
-DATA_ADDR = Path.home() / "Data/portfolio/"
+DATA_ADDR = "data"
 
 def get_exp_data(filename: str) -> list[dict[str, str]]:
     """

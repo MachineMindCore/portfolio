@@ -1,6 +1,7 @@
 import os
 from github import Github
 from dotenv import load_dotenv
+from pathlib import Path
 
 load_dotenv()
 
@@ -13,9 +14,6 @@ gh_client = Github(GH_TOKEN)
 OWNER = "MachineMindCore"
 JOBS = ["RPA-Developer_Pidgin_"]
 
-# Flask vars
-TEMPLATE_DIR = os.path.abspath("web/templates/")
-STATIC_DIR = os.path.abspath("web/styles/")
 
 TEMPLATES = {
     "profile": "profile.html",
