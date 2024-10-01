@@ -95,6 +95,10 @@ body {
     background-color: #f0f0f0; /* Change background color on hover */
 }
 
+.portrait:hover > .prf_img {
+    opacity: 0.6;
+}
+
 .prf_img img {
     width: 200px;
     height: 200px;
